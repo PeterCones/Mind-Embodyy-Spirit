@@ -33,7 +33,7 @@ if not SECRET_KEY:
     raise ValueError("The SECRET_KEY environment variable is not set.")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get("DEBUG", "False").lower() == "true"
+DEBUG = True
 
 # Security settings
 SECURE_SSL_REDIRECT = True
