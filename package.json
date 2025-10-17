@@ -1,0 +1,16 @@
+{
+  "name": "mind-embodyy-spirit",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Root package for developer scripts; actual frontend build lives in theme/static_src",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "dev": "npm --prefix theme/static_src run dev",
+    "build": "npm --prefix theme/static_src run build",
+    "clean": "npm --prefix theme/static_src run build:clean",
+    "build:tailwind": "npm --prefix theme/static_src run build:tailwind",
+    "heroku-postbuild": "npm --prefix theme/static_src ci --include=dev && npm --prefix theme/static_src run build"
+  }
+}
